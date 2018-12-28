@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeUAT">
+<parameter name="env" value="QA"></parameter>
+<parameter name="browser" value="Chrome"></parameter>
+<parameter name="url" value="https://www.makemytrip.com/"></parameter>
+<parameter name="envpropfilepath" value="F:\\Eclipse Projects\\Eclipse-Workspace\\Project1\\src\\main\\java\\resourcesAndUtils\\UAT.properties"></parameter>
+	<listeners>
+		<listener class-name="logs.Listeners"></listener>
+		<listener class-name="reports.ExtentReporterNG" />
+	</listeners>
+	<test thread-count="1" name="SearchFlights_Test">
+		<classes>
+			<class name="testCases.TC1_SearchFlights" />
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Regression -->

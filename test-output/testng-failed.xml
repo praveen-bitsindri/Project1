@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionQA]">
+  <parameter name="envpropfilepath" value="F:\\Eclipse Projects\\Eclipse-Workspace\\Project1\\src\\main\\java\\resourcesAndUtils\\QA.properties"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="env" value="QA"/>
+  <parameter name="url" value="https://www.makemytrip.com/"/>
+  <listeners>
+    <listener class-name="logs.Listeners"/>
+    <listener class-name="reports.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="SearchFlights_Test(failed)">
+    <classes>
+      <class name="testCases.TC1_SearchFlights">
+        <methods>
+          <include name="searchFlights"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- testCases.TC1_SearchFlights -->
+    </classes>
+  </test> <!-- SearchFlights_Test(failed) -->
+</suite> <!-- Failed suite [RegressionQA] -->
